@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.alphamudigital.com/" target="blank"><img src="./alpha-mu-digital-ventures_horizontal.webp" width="500" alt="Nest Logo" /></a>
+  <a href="https://www.alphamudigital.com/" target="_blank"><img src="./alpha-mu-digital-ventures_horizontal.webp" width="500" alt="Nest Logo" /></a>
 </p>
 
 
