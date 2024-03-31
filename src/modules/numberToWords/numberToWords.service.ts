@@ -1,4 +1,4 @@
-import { BadRequestException, HttpStatus, Injectable } from '@nestjs/common'
+import { HttpStatus, Injectable, UnprocessableEntityException } from '@nestjs/common'
 import { NumberToWordsDto } from 'src/dto/numberToWords.dto'
 
 @Injectable()
@@ -112,7 +112,7 @@ export class NumberToWordsService {
         words: result.trim()
       }
     } catch (error) {
-      throw new BadRequestException({
+      throw new UnprocessableEntityException({
         status: HttpStatus.UNPROCESSABLE_ENTITY,
         error: error.message
       })
