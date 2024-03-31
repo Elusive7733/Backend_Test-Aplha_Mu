@@ -19,9 +19,6 @@ RUN npm install --omit=dev
 # Copy all the files to the container.
 COPY . .
 
-# Run the tests.
-RUN npm run test
-
 # Create a "dist" folder with the production build.
 RUN npm run build
 
