@@ -54,6 +54,7 @@ export class WordsToNumberService {
         .replace(/ and /g, ' ')
         .replace(/,/g, '')
         .split(' ')
+
       let total = 0
       let currentNumber = 0
       let decimalPart = 0
@@ -61,6 +62,7 @@ export class WordsToNumberService {
 
       for (let i = 0; i < normalizedWords.length; i++) {
         const word = normalizedWords[i]
+
         if (this.basicNumbers[word] !== undefined) {
           if (!isDecimal) {
             currentNumber += this.basicNumbers[word]
@@ -75,14 +77,13 @@ export class WordsToNumberService {
         } else if (word === 'point') {
           isDecimal = true
         } else if (this.fractionNumbers[word] !== undefined) {
-          // Fraction handling
           if (!isDecimal) {
             if (currentNumber === 0) {
-              total += this.fractionNumbers[word] // Handle case where fraction is the first or a standalone number
+              total += this.fractionNumbers[word]
             } else {
-              currentNumber += this.fractionNumbers[word] // Add fraction to the current number
-              total += currentNumber // Then add the current number to the total
-              currentNumber = 0 // Reset current number after adding to total
+              currentNumber += this.fractionNumbers[word]
+              total += currentNumber
+              currentNumber = 0
             }
           }
         } else {

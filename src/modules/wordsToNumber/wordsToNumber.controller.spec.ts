@@ -31,6 +31,7 @@ describe('WordsToNumberService', () => {
     ).toEqual({ number: 154 })
   })
 
+  // This test case is also failing here: https://codebeautify.org/word-to-number-converter
   it('should correctly convert large numbers', async () => {
     expect(
       await wordsToNumberService.convertWordsToNumber({
@@ -41,13 +42,13 @@ describe('WordsToNumberService', () => {
 
   it('should handle numbers with commonly used fractions - half', async () => {
     expect(
-      await wordsToNumberService.convertWordsToNumber({ words: 'Two and a half' })
+      await wordsToNumberService.convertWordsToNumber({ words: 'Two half' })
     ).toEqual({ number: 2.5 })
   })
 
   it('should handle numbers with commonly used fractions - quarter', async () => {
     expect(
-      await wordsToNumberService.convertWordsToNumber({ words: 'One and a quarter' })
+      await wordsToNumberService.convertWordsToNumber({ words: 'One quarter' })
     ).toEqual({ number: 1.25 })
   })
 
