@@ -1,10 +1,9 @@
-//@ts-nocheck
 import { HttpStatus, Injectable, UnprocessableEntityException } from '@nestjs/common'
 import { WordsToNumberDto } from 'src/dto/wordsToNumber.dto'
 
 @Injectable()
 export class WordsToNumberService {
-  private readonly basicNumbers = {
+  private readonly basicNumbers: NumbersType = {
     zero: 0,
     one: 1,
     two: 2,
@@ -35,13 +34,13 @@ export class WordsToNumberService {
     ninety: 90
   }
 
-  private readonly multiplierNumbers = {
+  private readonly multiplierNumbers: NumbersType = {
     hundred: 100,
     thousand: 1000,
     million: 1000000
   }
 
-  private readonly fractionNumbers = {
+  private readonly fractionNumbers: NumbersType = {
     half: 0.5,
     quarter: 0.25
   }
