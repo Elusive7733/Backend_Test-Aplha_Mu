@@ -74,9 +74,17 @@ export class WordsToNumberService {
           currentNumber = 0
         } else if (word === 'point') {
           isDecimal = true
-        } else if (this.fractionNumbers[word] !== undefined && !isDecimal) {
-          total += currentNumber + this.fractionNumbers[word]
-          currentNumber = 0
+        } else if (this.fractionNumbers[word] !== undefined) {
+          // Fraction handling
+          if (!isDecimal) {
+            if (currentNumber === 0) {
+              total += this.fractionNumbers[word] // Handle case where fraction is the first or a standalone number
+            } else {
+              currentNumber += this.fractionNumbers[word] // Add fraction to the current number
+              total += currentNumber // Then add the current number to the total
+              currentNumber = 0 // Reset current number after adding to total
+            }
+          }
         } else {
           throw new UnprocessableEntityException({
             error: 'Invalid input',
