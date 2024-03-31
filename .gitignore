@@ -1,0 +1,16 @@
+node_modules
+.env
+
+# misc
+.DS_Store
+lerna-debug.log
+npm-debug.log
+yarn-error.log
+/**/npm-debug.log
+/packages/**/.npmignore
+/packages/**/LICENSE
+*.tsbuildinfo
+
+# Build
+/dist
+coverage/
