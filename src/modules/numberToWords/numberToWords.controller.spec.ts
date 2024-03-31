@@ -39,7 +39,7 @@ describe('NumberToWordsService', () => {
     } catch (error) {
       expect(error).toBeInstanceOf(HttpException)
       expect(error.response).toEqual({
-        status: HttpStatus.BAD_REQUEST,
+        status: HttpStatus.UNPROCESSABLE_ENTITY,
         error: 'Unsupported fractional part'
       })
     }
@@ -84,7 +84,7 @@ describe('NumberToWordsService', () => {
     } catch (error) {
       expect(error).toBeInstanceOf(HttpException)
       expect(error.response).toEqual({
-        status: HttpStatus.BAD_REQUEST,
+        status: HttpStatus.UNPROCESSABLE_ENTITY,
         error: 'Number out of supported range'
       })
     }

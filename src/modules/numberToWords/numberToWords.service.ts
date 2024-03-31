@@ -113,7 +113,7 @@ export class NumberToWordsService {
       }
     } catch (error) {
       throw new BadRequestException({
-        status: HttpStatus.BAD_REQUEST,
+        status: HttpStatus.UNPROCESSABLE_ENTITY,
         error: error.message
       })
     }
