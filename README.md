@@ -19,22 +19,22 @@
 
 ##### Create an image named 'backend' from the Dockerfile in the current directory
 ```bash
-$ docker build -t backend .
+docker build -t backend .
 ```
 ##### Create a Docker container from the image
 ```bash
-$ docker run -d --publish 5000:5000 --name backend-container backend
+docker run -d --publish 5000:5000 --name backend-container backend
 ```
 After running the above command, the backend will be running on port 5000.
 
 ##### Check the logs of the container
 ```bash
-$ docker logs backend-container
+docker logs backend-container
 ```
 
 ##### Stop the container
 ```bash
-$ docker stop backend-container
+docker stop backend-container
 ```
 
 ---
@@ -47,59 +47,59 @@ $ docker stop backend-container
 
 #### Installation
 ```bash
-$ npm install
+npm install
 ```
 
 #### Running the app
 ```bash
 # development
-$ npm run start
+npm run start
 
 # watch mode
-$ npm run start:dev
+npm run start:dev
 
 # production mode
-$ npm run start:prod
+npm run start:prod
 ```
 
 #### Test
 
 ```bash
 # unit tests
-$ npm run test
+npm run test
 
 # test coverage
-$ npm run test:cov
+npm run test:cov
 ```
 
 ### Using pnpm
 
 #### Installation
 ```bash
-$ pnpm install
+pnpm install
 ```
 
 #### Running the app
 
 ```bash
 # development
-$ pnpm run start
+pnpm run start
 
 # watch mode
-$ pnpm run start:dev
+pnpm run start:dev
 
 # production mode
-$ pnpm run start:prod
+pnpm run start:prod
 ```
 
 #### Test
 
 ```bash
 # unit tests
-$ pnpm run test
+pnpm run test
 
 # test coverage
-$ pnpm run test:cov
+pnpm run test:cov
 ```
 ---
 #### License
