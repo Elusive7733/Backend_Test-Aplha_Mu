@@ -26,6 +26,7 @@ docker build -t backend .
 docker run -d --publish 5000:5000 --name backend-container backend
 ```
 After running the above command, the backend will be running on port 5000.
+Make the api calls at: http://localhost:5000/
 
 ##### Check the logs of the container
 ```bash
