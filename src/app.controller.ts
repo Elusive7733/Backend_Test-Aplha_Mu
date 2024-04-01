@@ -10,13 +10,4 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello()
   }
-
-  @Get('test')
-  getRequest(@Req() request: Request, @Body() data: Body): string {
-    console.log(data) 
-    console.log(request.body)
-    return JSON.stringify({
-      bro: 'Abdullah'
-    })
-  }
 }
